@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register & Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 360px;
+      background-color: #1a1a1a;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
+    }
+
+    .container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff3333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ff3333;
+      border-radius: 4px;
+      background-color: #333;
+      color: #fff;
+      outline: none;
+    }
+
+    .form-group input:focus {
+      border-color: #e60000;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      background-color: #ff3333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #e60000;
+    }
+
+    .toggle-btn {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 1rem;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .toggle-btn a {
+      color: #ff3333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .toggle-btn a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="form-title">Register Account</h1>
+    <form id="auth-form">
+      <div id="name-group" class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+      </div>
+      <div class="form-group" id="confirm-password-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="Confirm your password" required />
+      </div>
+      <button type="submit" class="btn" id="auth-btn">Register Account</button>
+    </form>
+    <p class="toggle-btn">
+      Already have an account? <a href="#" id="toggle-link">Login</a>
+    </p>
+  </div>
+
+  <script>
+    const toggleAuthMode = () => {
+      const isRegister = document.getElementById("form-title").textContent.includes("Register");
+      const nameGroup = document.getElementById("name-group");
+      const confirmPasswordGroup = document.getElementById("confirm-password-group");
+      const authBtn = document.getElementById("auth-btn");
+      const toggleLink = document.getElementById("toggle-link");
+
+      if (isRegister) {
+        // Switch to Login
+        document.getElementById("form-title").textContent = "Login Account";
+        authBtn.textContent = "Login";
+        nameGroup.style.display = "none";
+        confirmPasswordGroup.style.display = "none";
+        toggleLink.textContent = "Register";
+        document.querySelector(".toggle-btn").innerHTML = `Don't have an account? <a href="#" id="toggle-link">Register</a>`;
+      } else {
+        // Switch to Register
+        document.getElementById("form-title").textContent = "Register Account";
+        authBtn.textContent = "Register Account";
+        nameGroup.style.display = "block";
+        confirmPasswordGroup.style.display = "block";
+        toggleLink.textContent = "Login";
+        document.querySelector(".toggle-btn").innerHTML = `Already have an account? <a href="#" id="toggle-link">Login</a>`;
+      }
+    };
+
+    document.getElementById("toggle-link").addEventListener("click", (e) => {
+      e.preventDefault();
+      toggleAuthMode();
+    });
+  </script>
+</body>
+</html>

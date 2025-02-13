@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Food Items Analysis</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>CalCo</h1>
+    <nav>
+      <a href="set_calorie.html">Set Calorie Goal</a>
+      <a href="food_items.html">Food Items</a>
+    </nav>
+  </header>
+  <main class="container">
+    <h2>Food Items Analysis</h2>
+    <table id="foodTable">
+      <thead>
+        <tr>
+          <th>Food Item</th>
+          <th>Calories</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Populated dynamically -->
+      </tbody>
+    </table>
+    <p class="summary">Total Calories Consumed: <span id="totalFoodCalories">0</span></p>
+    <a href="add_exercise.html" class="next-button">Next: Add Exercise</a>
+  </main>
+</body>
+</html>

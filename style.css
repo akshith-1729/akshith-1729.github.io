@@ -1,0 +1,165 @@
+/* style.css */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #111;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    color: #ff3333;
+    margin: 0;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: #ff3333;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
+  }
+  
+  h2 {
+    color: #ff3333;
+    text-align: center;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+  }
+  
+  form input[type="number"],
+  form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ff3333;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  button {
+    background-color: #ff3333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  button:hover {
+    background-color: #e60000;
+  }
+  
+  .food-list,
+  .exercise-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .food-list li {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+  }
+  .exercise-list li {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .food-list li:last-child,
+  .exercise-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .food-list input[type="checkbox"],
+  .exercise-list input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .exercise-list .duration {
+    width: 80px;
+    padding: 5px;
+    border: 1px solid #ff3333;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #fff;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .summary {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .next-button {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ff3333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .next-button:hover {
+    background-color: #e60000;
+  }
+  
+  .report p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-align: center;
+  }
+  

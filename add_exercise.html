@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Select Exercises</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>CalCo</h1>
+    <nav>
+      <a href="set_calorie.html">Set Calorie Goal</a>
+      <a href="food_items.html">Food Items</a>
+    </nav>
+  </header>
+  <main class="container">
+    <h2>Select Exercises Performed</h2>
+    <form id="exerciseForm">
+      <ul class="exercise-list">
+        <li>
+          <input type="checkbox" name="exercise" value="Running" data-rate="10" id="exRunning">
+          <label for="exRunning">Running (10 cal/min)</label>
+          <input type="number" name="duration" class="duration" placeholder="Minutes" disabled>
+        </li>
+        <li>
+          <input type="checkbox" name="exercise" value="Cycling" data-rate="8" id="exCycling">
+          <label for="exCycling">Cycling (8 cal/min)</label>
+          <input type="number" name="duration" class="duration" placeholder="Minutes" disabled>
+        </li>
+        <li>
+          <input type="checkbox" name="exercise" value="Walking" data-rate="4" id="exWalking">
+          <label for="exWalking">Walking (4 cal/min)</label>
+          <input type="number" name="duration" class="duration" placeholder="Minutes" disabled>
+        </li>
+        <li>
+          <input type="checkbox" name="exercise" value="Swimming" data-rate="11" id="exSwimming">
+          <label for="exSwimming">Swimming (11 cal/min)</label>
+          <input type="number" name="duration" class="duration" placeholder="Minutes" disabled>
+        </li>
+        <li>
+          <input type="checkbox" name="exercise" value="Strength Training" data-rate="7" id="exStrength">
+          <label for="exStrength">Strength Training (7 cal/min)</label>
+          <input type="number" name="duration" class="duration" placeholder="Minutes" disabled>
+        </li>
+        <li>
+          <input type="checkbox" name="exercise" value="Aerobics" data-rate="9" id="exAerobics">
+          <label for="exAerobics">Aerobics (9 cal/min)</label>
+          <input type="number" name="duration" class="duration" placeholder="Minutes" disabled>
+        </li>
+      </ul>
+      <button type="submit">Submit Exercises</button>
+    </form>
+  </main>
+</body>
+</html>
